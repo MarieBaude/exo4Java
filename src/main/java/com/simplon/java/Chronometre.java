@@ -3,24 +3,22 @@ package com.simplon.java;
 import java.util.Calendar;
 
 public class Chronometre {
-	private double time;
+	private int time;
 	
-	Chronometre(double time) {
-		this.time = time;
-	}
-	
-	public void advanceTime() {
+	Chronometre() {
 		
 	}
 	
-	public void backTime() {
-		
+	public void advanceTime(int i) {
+		this.time += i;
+	}
+	
+	public void backTime(int i) {
+		this.time -= i;
 	}
 	
 	public void date() {
-		
-
-	}
-	
-	
+		Calendar c1 = Calendar.getInstance();
+        System.out.println(c1.getTime());
+	}		
 }
