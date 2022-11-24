@@ -1,6 +1,8 @@
 package com.simplon.java;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class Chronometre {
 	private int time;
@@ -17,8 +19,10 @@ public class Chronometre {
 		this.time -= i;
 	}
 	
-	public void date() {
+	public String date() {
 		Calendar c1 = Calendar.getInstance();
-        System.out.println(c1.getTime());
+		//return c1.getTime();
+		String date = new SimpleDateFormat("dd/mm/yyyy").format(new Date(this.time * 1000));
+		return date;
 	}		
 }
