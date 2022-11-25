@@ -13,7 +13,7 @@ public class exo2 {
 	    System.out.print("Saisir votre mot de passe : ");
 	    String pw = sc2.nextLine();
 	    
-	    if (login == user.getLogin() && pw == user.getPassword()) {
+	    if (user.getLogin().equals(login) && user.getPassword().equals(pw)) {
 	    	System.out.println("Vous êtes connecté.");
 	    	
 	    } else {

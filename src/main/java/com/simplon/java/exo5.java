@@ -1,10 +1,10 @@
 package com.simplon.java;
 
-public class exo4 {
+public class exo5 {
 
 	public static void main(String[] args) {
-		// voir class animal, chat et chien
-
+		// voir class quadrilatere
+		
 	}
 
 }

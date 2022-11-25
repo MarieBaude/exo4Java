@@ -15,8 +15,6 @@ public class User {
 		return login;
 	}
 
-
-
 	/**
 	 * @param login the login to set
 	 */
