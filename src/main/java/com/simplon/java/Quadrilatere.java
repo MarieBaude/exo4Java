@@ -1,6 +1,6 @@
 package com.simplon.java;
 
-public abstract class Quadrilatere implements FormeGeometrique {
+public class Quadrilatere implements FormeGeometrique {
 	private double corner1;
 	private double corner2;
 	private double corner3;
@@ -80,5 +80,12 @@ public abstract class Quadrilatere implements FormeGeometrique {
 	public double calc() {
 		double result = corner1 + corner2 + corner3 + corner4;
 		return result;
+	}
+
+
+	@Override
+	public double calculPerimetre() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

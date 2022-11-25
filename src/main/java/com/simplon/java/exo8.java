@@ -1,12 +1,10 @@
 package com.simplon.java;
 
-import java.io.FileWriter;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
-public class exo7 { 
+public class exo8 {
 	public static void connect(User user) {
 		Scanner sc = new Scanner(System.in);
 	    System.out.print("Saisir votre login : ");
@@ -25,7 +23,7 @@ public class exo7 {
 	}
 
 	public static void main(String[] args) {
-		User u1 = new User("Marie", "Baude", 2002, "mail", "login", "pw");
+		/*User u1 = new User("Marie", "Baude", 2002, "mail", "login", "pw");
 		User u2 = new User("Marie", "Baude", 2002, "mail", "login2", "pw2");
 		User u3 = new User("Marie", "Baude", 2002, "mail", "login3", "pw3");
 		User u4 = new User("Marie", "Baude", 2002, "mail", "login4", "pw4");
@@ -36,30 +34,17 @@ public class exo7 {
 		usersList.add(u3);
 		usersList.add(u4);
 		
-		FileWriter file = null;
+		connect(u1);*/
 		
-		final String DELIMITER = ",";
-		final String SEPARATOR = "\n";
+		Scanner sc3 = new Scanner(new File("Users/mariebaude/Documents/Simplon Java/exo4/User.csv"));  
+		sc3.useDelimiter(",");    
 		
-		try {
-			file = new FileWriter("User.csv");
-        
-	        Iterator it = usersList.iterator();
-	        while(it.hasNext()) {
-	          User b = (User)it.next();
-	          file.append(b.getLogin());
-	          file.append(DELIMITER);
-	          file.append(b.getPassword());
-	          
-	          file.append(SEPARATOR);
-	        }
-      
-	        file.close();
-		} catch(Exception e) {
-			e.printStackTrace();
-	    }
+		while (sc3.hasNext())  {  
+			System.out.print(sc3.next());    
+		}   
 		
-		
-		connect(u1);
+		sc3.close();    
+
 	}
+
 }
