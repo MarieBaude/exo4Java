@@ -21,7 +21,6 @@ public class Chronometre {
 	
 	public String date() {
 		Calendar c1 = Calendar.getInstance();
-		//return c1.getTime();
 		String date = new SimpleDateFormat("dd/mm/yyyy").format(new Date(this.time * 1000));
 		return date;
 	}		
